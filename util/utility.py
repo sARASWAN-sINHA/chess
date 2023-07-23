@@ -168,6 +168,9 @@ get_chess_co_ordinates = lambda pos: (chr(pos[0]+64) + str(pos[1]))             
 get_position_of_pawn = lambda positions, pawn: positions.get('postions', None).get(pawn, None) # gets the position of pawn from the request data that is send to the server.
 
 
-
-
-
+pawn_mapper = {
+    'queen'  : find_queen_valid_positions, 
+    'bishop' : find_bishop_valid_positions,
+    'knight' : find_knight_valid_positions,
+    'rook'   : find_rook_valid_positions,
+    }
