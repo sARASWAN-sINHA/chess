@@ -1,4 +1,4 @@
-FROM python: 3.11.4-slim
+FROM python:3.11.4-slim
 
 ENV PYTHONUNBUFFERED 1
 
@@ -10,8 +10,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 8000
-
-CMD python manage.py runserver
+CMD bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
 
 
