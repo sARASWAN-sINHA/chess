@@ -165,7 +165,7 @@ def find_rook_valid_positions(queen_all_positions: set, bishop_all_positions: se
 
 get_index = lambda chess_position: (ord(chess_position[0]) - 64, ord(chess_position[1]) - 48)  # finds numerical indices of the pawns based on the chess co-ordinates.
 get_chess_co_ordinates = lambda pos: (chr(pos[0]+64) + str(pos[1]))                            # generates the chess co-ordinates based on the indices.
-get_position_of_pawn = lambda positions, pawn: positions.get('postions', {}).get(pawn, None)   # gets the position of pawn from the request data that is send to the server.
+get_position_of_pawn = lambda positions, pawn: positions.get('positions', {}).get(pawn, None)   # gets the position of pawn from the request data that is send to the server.
 
 
 pawn_mapper = {
